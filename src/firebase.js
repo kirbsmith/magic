@@ -33,7 +33,7 @@ export function useAuth() {
 
 const firestore = firebase.firestore()
 const messagesCollection = firestore.collection('messages')
-const messagesQuery = messagesCollection.orderBy('createdAt', 'desc').limit(15)
+const messagesQuery = messagesCollection.orderBy('createdAt', 'desc').limit(10)
 
 export function useChat() {
   const messages = ref([])
