@@ -8,21 +8,15 @@
         <button class="mx-2 border border-black px-3 py-1 rounded-md my-4" @click="getLand('plains')">Plains</button>
         <button class="mx-2 border border-black px-3 py-1 rounded-md my-4" @click="getLand('mountain')">Mountain</button>
     </div>
-    <div class="flex flex-column pb-6 place-content-center border border-black">
+    <div class="flex flex-col pb-6 place-content-center border border-black">
         <h2 class="text-center">Creatures</h2>
-        <div>
+        <div class="flex flex-row flex-wrap place-content-center">
             <CardComponent v-bind:card="card" v-for="card in creatureCards" :key="card.multiverseid" />
         </div>
     </div>
-    <!-- <CardComponent v-bind:creatureCards = "creatureCards" v-for="card in creatureCards" :key="card.multiverseid"/> -->
-    <!-- <div class="flex flex-row flex-wrap pb-6 border border-black">
-        <div v-for="card in creatureCards" :key="card.multiverseid" class="w-1/4 flex flex-col border-2 border-black px-4 py-4">
-            <img :src=card.imageUrl alt="" class="" :class="isTapped ? 'rotate-45' : 'rotate-0'"/>
-        </div>
-    </div> -->
-    <div class="flex flex-row flex-wrap pb-6 place-content-center">
-        <h2 class="text-center">Land</h2>
-        <div>
+    <div class="flex flex-col pb-6 place-content-center place-items-center">
+        <h2>Land</h2>
+        <div class="flex flex-row flex-wrap place-items-center">
             <CardComponent v-bind:card="card" v-for="card in landCards" :key="card.multiverseid" />
         </div>
     </div>
