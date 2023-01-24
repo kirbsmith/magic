@@ -1,15 +1,21 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <h1 class="text-5xl pb-8 font-sans">Magic: The Gathering Online Game</h1>
+  <NavComponent />
+  <ChatComponent />
+  <PlayerComponent />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import NavComponent from './components/NavComponent.vue'
+import ChatComponent from './components/ChatComponent.vue'
+import PlayerComponent from './components/PlayerComponent.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    NavComponent,
+    ChatComponent,
+    PlayerComponent
   }
 }
 </script>
